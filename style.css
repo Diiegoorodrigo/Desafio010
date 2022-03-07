@@ -37,7 +37,7 @@
     padding: 0px;
 }
 
-
+/** na linha 35 foi declarado  um comando universal para pagina, para toda tag ou box que for criada não teriam margem e nem preenchimento, então logo todos teriamm que ser feitos manualmente **/
 
 
 
@@ -51,6 +51,8 @@ a.externo::after {
     content: '\0020\1F517';
 }
 
+/** Na linha 50 declaramos que todo link com a classe "externo" iria rebecer um emoji de link, declarando que todo link que é externo carrega o emoji de link**/
+
 header {
     background-image: linear-gradient(to bottom, var(--cor3),var(--cor5) );
     color: white;
@@ -61,6 +63,8 @@ header {
     
     
 }
+
+/**  Aqui no header colocamos uma altura minima para ele não ficar desproporcional quando aberto em outros dispositivos **/
 
 header > h1 {
     font-family: var(--fonte1);
@@ -77,6 +81,8 @@ header > p {
     font-size: 1.2em;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.473);
 }
+
+/** na linha 80 colocamos um tamanho máximo pro texto pra ele não ficar muito extenso e quebrar conforme a proporção da tela, não cansando a leitura **/
 
 nav {
     background-color: var(--cor5);
@@ -112,6 +118,8 @@ main {
 
 
 }
+
+/** Aqui no main declaramos um tamanho máximo e um tamanho minimo para facilitar na hora de deixar o site responsivo assim não tornando cansativo a leitura em dispositivos maiores **/
 
 main h1 {
     
@@ -160,11 +168,15 @@ main  img {
     width: 100%;
 }
 
+/** na linha 168 declaramos que as imagens possuiriam 100% do seu tamanho para ajudar na responsividade do site, porém na html deixamos de forma responsiva para a imagem padrão não atrapalhar a responsividade criando barra de rolagem lateral **/
+
 main img.pequena {
     max-width: 350px;
     display: block;
     margin: auto;
 }
+
+/** Na linha 174 declaramos um tamhno maximo pra imagem não aumentar o seu tamanho pois a imagem era pequena e poderia perder a qualidade,também colocamos margin auto e display block pra  imagem alinha no meio automaticamente **/
 
 div.video-um {
     background-color: var(--cor5);
@@ -183,6 +195,7 @@ div.video-um > iframe {
     height: 90%;
 
 }
+/** Para configurar o video e deixa-lo responsivo foi necessário coloca-lo dentro de uma div e configurar tanto quanto a div e tanto quanto uma classe para conseguir auxiliar na responsividade fazendo com que o video ficasse adequado conforme o tamanho da tela.**/
 
 aside {
     background-color: var(--cor1);
@@ -202,9 +215,9 @@ aside > h3 {
     list-style-type: '\2714\0020\0020';
     columns: 2;
     list-style-position: inside;
-
 }
 
+/** Na linha 214 declaramos que uma lista sem ordem teria o simbolo de check que seriam duas colunas uma ao lado da outra**/
 
 footer {
     text-align: center;
