@@ -1,0 +1,228 @@
+@charset "utf-08";
+
+/** Na primeira linha configuramos o css conforme os caracteres da pagina HTML5 que no caso é o utf-8 **/
+
+@font-face {
+
+    font-family: bebas;
+    src: url('BebasNeue-Regular.ttf') format('opentype');
+    font-weight: normal;
+}
+@font-face {
+
+    font-family: android;
+    src: url('fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+/** Da linha 5 até a linha 15 temos a configuração de importação de fonte externa, usando a fonte armazenada em alguma pasta, com o códgigo "@font-face declarando dentro dele o seu nome "font-family" sua url, formato e font-wheight **/
+
+:root{
+    --cor0: #c5ebd6;
+    --cor1: #83E1AD;
+    --cor2: #3DDC84;
+    --cor3: #2FA866;
+    --cor4: #1A5C37;
+    --cor5: #063d1e;
+    --fonte0: Arial, Helvetica, sans-serif;
+    --fonte1: 'bebas', cursive;
+    --fonte2: 'android', cursive;
+}
+
+/** na linha 20 criamos o root onde conseguimos criar algumas variaveis para facilitar o uso delas no decorrer do projeto **/
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+
+body {
+    background-color:var(--cor1);
+    font-family: var(--fonte0);
+}
+
+
+a.externo::after {
+    content: '\0020\1F517';
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor3),var(--cor5) );
+    color: white;
+    text-align: center;
+    min-height: 150px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    
+    
+}
+
+header > h1 {
+    font-family: var(--fonte1);
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.473);
+    font-weight: normal;
+}
+
+header > p {
+    color: white;
+    margin: auto;
+    max-width: 500px;
+    font-size: 1.2em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.473);
+}
+
+nav {
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.404);
+}
+nav > a {
+    color: var(--cor0);
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5s
+
+}
+
+nav > a:hover {
+
+    background-color: var(--cor4);
+    border-radius: 5px;
+    
+}
+main {
+
+    background-color: rgb(255, 255, 255);
+    min-width: 320px;
+    max-width: 1000px;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.452);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+
+}
+
+main h1 {
+    
+    font-family: var(--fonte2);
+    font-size: 1.8em;
+    color: var(--cor5);
+    font-weight: normal;
+}
+
+main p {
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 2em;
+    font-size: 1em;
+}
+
+main h2 {
+    font-family: var(--fonte2);
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 8px;
+    font-size: 1.5em;
+    color: var(--cor4);
+    font-weight: normal;
+}
+main strong {
+
+    font-weight: bold;
+    color: var(--cor4);
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor4);
+}
+
+main  img {
+    width: 100%;
+}
+
+main img.pequena {
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+div.video-um {
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.514);
+    position: relative;
+    padding-bottom: 59%;
+}
+
+div.video-um > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+
+}
+
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+}
+aside > h3 {
+    background-color: var(--cor5);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+ ul {
+    list-style-type: '\2714\0020\0020';
+    columns: 2;
+    list-style-position: inside;
+
+}
+
+
+footer {
+    text-align: center;
+    background-color: var(--cor5);
+    color: white;
+    font-size: 0.8em;
+    padding: 5px;
+}
+footer > a {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+footer > a:hover {
+    text-decoration: underline;
+    color: var(--cor3);
+}
